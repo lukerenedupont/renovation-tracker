@@ -74,7 +74,6 @@ export default function RoomSection({ room, onAddItem, onEditItem, onDeleteItem 
               key={item.id}
               item={item}
               onEdit={() => onEditItem(item)}
-              onDelete={() => onDeleteItem(item.id)}
             />
           ))}
         </div>

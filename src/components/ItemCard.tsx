@@ -1,12 +1,10 @@
 import { ExternalLink } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
-import { cn } from '@/lib/utils'
 import type { Item } from '../types'
 
 interface Props {
   item: Item
   onEdit: () => void
-  onDelete: () => void
 }
 
 
