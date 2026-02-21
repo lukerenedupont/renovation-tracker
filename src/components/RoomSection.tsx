@@ -7,7 +7,6 @@ interface Props {
   room: Room
   onAddItem: () => void
   onEditItem: (item: Item) => void
-  onDeleteItem: (itemId: string) => void
 }
 
 function fmt(n: number): string {
@@ -26,7 +25,7 @@ const DOT: Record<string, string> = {
   small:   'bg-teal-500',
 }
 
-export default function RoomSection({ room, onAddItem, onEditItem, onDeleteItem }: Props) {
+export default function RoomSection({ room, onAddItem, onEditItem }: Props) {
   const total = room.items.reduce((sum, item) => sum + (item.price ?? 0), 0)
   const pricedCount = room.items.filter(i => i.price != null).length
 

@@ -25,7 +25,7 @@ function hostname(url: string): string {
   }
 }
 
-export default function ItemCard({ item, onEdit, onDelete }: Props) {
+export default function ItemCard({ item, onEdit }: Props) {
   return (
     <Card
       className="overflow-hidden flex flex-col border-0 shadow-sm hover:shadow-md transition-shadow duration-150 cursor-pointer group"
