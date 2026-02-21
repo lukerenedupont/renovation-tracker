@@ -119,7 +119,6 @@ export default function App() {
             room={selectedRoom}
             onAddItem={() => setModal({ roomId: selectedRoom.id })}
             onEditItem={(item) => setModal({ roomId: selectedRoom.id, item })}
-            onDeleteItem={(itemId) => handleDelete(selectedRoom.id, itemId)}
           />
         )}
       </main>
