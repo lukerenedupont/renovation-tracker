@@ -62,16 +62,7 @@ export default function App() {
     setModal(null)
   }
 
-  function handleDelete(roomId: string, itemId: string) {
-    const next = rooms.map(room =>
-      room.id !== roomId
-        ? room
-        : { ...room, items: room.items.filter(i => i.id !== itemId) }
-    )
-    updateRooms(next)
-  }
-
-  const activeRoom = modal ? rooms.find(r => r.id === modal.roomId) : null
+const activeRoom = modal ? rooms.find(r => r.id === modal.roomId) : null
   const selectedRoom = rooms.find(r => r.id === selectedRoomId) ?? rooms[0]
 
   return (
